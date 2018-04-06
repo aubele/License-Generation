@@ -69,10 +69,6 @@ public:
 	void logLicenseFile(QString logFilePath, QString licenseFilePath, QString licenseFileName);
 
 	/**
-	* Generates a new public private key pair in the directory of the application.
-	*/
-	void generateKeyPair();
-	/**
 	* Creates the RSA-Signature for the licensefile with the CrpytoPP library.
 	* @param licenseDataInBytes The string written in the license file as QByteArray for converting reasons.
 	* @param signaturePath Path to the signaturefile

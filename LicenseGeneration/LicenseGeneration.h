@@ -53,10 +53,6 @@ private:
 	*/
 	void setUpButtonBox();
 	/**
-	* Adds the Button to generate a new keypair.
-	*/
-	void setUpKeyButton();
-	/**
 	* Sets the input mask for the mac address textline.
 	*/
 	void setUpMacAddress();
@@ -173,11 +169,6 @@ private slots:
 	* @see setAllValues()
 	*/
 	void onGenerateLicenseFile();
-	/**
-	* Slot for the generate new private public key pair button. Calls the appropiate function
-	* in the controller to generate a new key pair after asking the user if he is sure to do this.
-	*/
-	void onGenerateKeys();
 	/**
 	* Slot for the duration combobox, if a new value gets selected, it calculates the new 
 	* expiration date and adjusts the label.
