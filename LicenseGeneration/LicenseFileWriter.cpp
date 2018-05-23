@@ -35,12 +35,6 @@ void LicenseFileWriter::createEntry(QString header, QString keyword, QString val
 	}
 }
 
-void LicenseFileWriter::createEntry(QString header, QString keyword, int value)
-{
-	// Just call the method with the converted parameter
-	createEntry(header, keyword, QString::number(value));
-}
-
 void LicenseFileWriter::createEntry(QString header, QString keyword, bool value)
 {
 	// Just call the method with the converted parameter
