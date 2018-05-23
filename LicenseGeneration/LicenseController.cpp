@@ -217,13 +217,6 @@ void LicenseController::writeLicenseFile(QString licenseFilePath)
 	writer->createHeader("Licensing");
 	// Mac string
 	writer->createEntry("Licensing", model->getKeyWordMac(), model->getMac());
-	// Open public key file 
-	QFile file("pubkey.txt");
-	if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
-		return;
-	QTextStream in(&file);
-	// Add it to the file
-	writer->createEntry("Licensing", "key", in.readAll());
 
 	// Write file
 	writer->write(licenseFilePath);
@@ -259,37 +252,6 @@ void LicenseController::logLicenseFile(QString logFilePath, QString licenseFileP
 
 ////////////////////////////////////////////////////////////////////////////////////
 // ### RSA SIGNATURE ###
-
-
-void LicenseController::generateKeyPair()
-{
-	// InvertibleRSAFunction is used directly only because the private key
-	// won't actually be used to perform any cryptographic operation;
-	// otherwise, an appropriate typedef'ed type from rsa.h would have been used.
-	AutoSeededRandomPool rng;
-	InvertibleRSAFunction privkey;
-	privkey.Initialize(rng, 1024);
-
-	// With the current version of Crypto++, MessageEnd() needs to be called
-	// explicitly because Base64Encoder doesn't flush its buffer on destruction.
-	Base64Encoder privkeysink(new FileSink("privkey.txt"));
-	privkey.DEREncode(privkeysink);
-	privkeysink.MessageEnd();
-
-	// Create a public key
-	RSAFunction pubkey(privkey);
-	using CryptoPP::Name::Pad;
-	using CryptoPP::Name::InsertLineBreaks;
-	// Create a encoder without paddings, so we can store the data better, since we want to
-	// write it in another file
-	Base64Encoder encoder;
-	AlgorithmParameters params = MakeParameters(Pad(), false)(InsertLineBreaks(), false);
-	encoder.IsolatedInitialize(params);
-	encoder.Attach(new FileSink("pubkey.txt"));
-	// Write
-	pubkey.DEREncode(encoder);
-	encoder.MessageEnd();
-}
 
 
 void LicenseController::writeSignatureForLicense(QByteArray licenseDataInBytes, QString signaturePath)

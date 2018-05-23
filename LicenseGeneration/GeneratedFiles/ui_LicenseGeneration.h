@@ -20,7 +20,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -51,15 +50,6 @@ public:
     QVBoxLayout *verticalLayout_6;
     QLineEdit *macLine;
     QLabel *lblMacWarning;
-    QLabel *lblLastName;
-    QLabel *lblEnterCustNumb;
-    QLabel *lblCustomerNumber;
-    QLabel *lblMac;
-    QLabel *lblEmail;
-    QLabel *lblFirstName;
-    QLabel *lblCompany;
-    QLabel *lblFeatures;
-    QLabel *lblDuration;
     QWidget *company;
     QVBoxLayout *verticalLayout_5;
     QLineEdit *companyLine;
@@ -71,7 +61,15 @@ public:
     QCheckBox *featureHistogramBox;
     QCheckBox *featureColorBox;
     QLabel *lblFeatureWarning;
-    QPushButton *generateKeys;
+    QLabel *lblLastName;
+    QLabel *lblEnterCustNumb;
+    QLabel *lblCustomerNumber;
+    QLabel *lblMac;
+    QLabel *lblEmail;
+    QLabel *lblFirstName;
+    QLabel *lblCompany;
+    QLabel *lblFeatures;
+    QLabel *lblDuration;
 
     void setupUi(QMainWindow *LicenseGenerationClass)
     {
@@ -213,60 +211,6 @@ public:
 
         gridLayout->addWidget(mac, 5, 2, 1, 1);
 
-        lblLastName = new QLabel(centralWidget);
-        lblLastName->setObjectName(QStringLiteral("lblLastName"));
-        lblLastName->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-
-        gridLayout->addWidget(lblLastName, 2, 0, 1, 1);
-
-        lblEnterCustNumb = new QLabel(centralWidget);
-        lblEnterCustNumb->setObjectName(QStringLiteral("lblEnterCustNumb"));
-        sizePolicy.setHeightForWidth(lblEnterCustNumb->sizePolicy().hasHeightForWidth());
-        lblEnterCustNumb->setSizePolicy(sizePolicy);
-
-        gridLayout->addWidget(lblEnterCustNumb, 16, 2, 1, 1);
-
-        lblCustomerNumber = new QLabel(centralWidget);
-        lblCustomerNumber->setObjectName(QStringLiteral("lblCustomerNumber"));
-
-        gridLayout->addWidget(lblCustomerNumber, 16, 0, 1, 1);
-
-        lblMac = new QLabel(centralWidget);
-        lblMac->setObjectName(QStringLiteral("lblMac"));
-        lblMac->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-
-        gridLayout->addWidget(lblMac, 5, 0, 1, 1);
-
-        lblEmail = new QLabel(centralWidget);
-        lblEmail->setObjectName(QStringLiteral("lblEmail"));
-        lblEmail->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-
-        gridLayout->addWidget(lblEmail, 3, 0, 1, 1);
-
-        lblFirstName = new QLabel(centralWidget);
-        lblFirstName->setObjectName(QStringLiteral("lblFirstName"));
-        lblFirstName->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-
-        gridLayout->addWidget(lblFirstName, 1, 0, 1, 1);
-
-        lblCompany = new QLabel(centralWidget);
-        lblCompany->setObjectName(QStringLiteral("lblCompany"));
-        lblCompany->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-
-        gridLayout->addWidget(lblCompany, 4, 0, 1, 1);
-
-        lblFeatures = new QLabel(centralWidget);
-        lblFeatures->setObjectName(QStringLiteral("lblFeatures"));
-        lblFeatures->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-
-        gridLayout->addWidget(lblFeatures, 8, 0, 1, 1);
-
-        lblDuration = new QLabel(centralWidget);
-        lblDuration->setObjectName(QStringLiteral("lblDuration"));
-        lblDuration->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-
-        gridLayout->addWidget(lblDuration, 11, 0, 1, 1);
-
         company = new QWidget(centralWidget);
         company->setObjectName(QStringLiteral("company"));
         sizePolicy.setHeightForWidth(company->sizePolicy().hasHeightForWidth());
@@ -329,10 +273,59 @@ public:
 
         gridLayout->addWidget(features, 8, 2, 1, 1);
 
-        generateKeys = new QPushButton(centralWidget);
-        generateKeys->setObjectName(QStringLiteral("generateKeys"));
+        lblLastName = new QLabel(centralWidget);
+        lblLastName->setObjectName(QStringLiteral("lblLastName"));
+        lblLastName->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
-        gridLayout->addWidget(generateKeys, 17, 0, 1, 1);
+        gridLayout->addWidget(lblLastName, 2, 0, 1, 1);
+
+        lblEnterCustNumb = new QLabel(centralWidget);
+        lblEnterCustNumb->setObjectName(QStringLiteral("lblEnterCustNumb"));
+        sizePolicy.setHeightForWidth(lblEnterCustNumb->sizePolicy().hasHeightForWidth());
+        lblEnterCustNumb->setSizePolicy(sizePolicy);
+
+        gridLayout->addWidget(lblEnterCustNumb, 16, 2, 1, 1);
+
+        lblCustomerNumber = new QLabel(centralWidget);
+        lblCustomerNumber->setObjectName(QStringLiteral("lblCustomerNumber"));
+
+        gridLayout->addWidget(lblCustomerNumber, 16, 0, 1, 1);
+
+        lblMac = new QLabel(centralWidget);
+        lblMac->setObjectName(QStringLiteral("lblMac"));
+        lblMac->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        gridLayout->addWidget(lblMac, 5, 0, 1, 1);
+
+        lblEmail = new QLabel(centralWidget);
+        lblEmail->setObjectName(QStringLiteral("lblEmail"));
+        lblEmail->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        gridLayout->addWidget(lblEmail, 3, 0, 1, 1);
+
+        lblFirstName = new QLabel(centralWidget);
+        lblFirstName->setObjectName(QStringLiteral("lblFirstName"));
+        lblFirstName->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        gridLayout->addWidget(lblFirstName, 1, 0, 1, 1);
+
+        lblCompany = new QLabel(centralWidget);
+        lblCompany->setObjectName(QStringLiteral("lblCompany"));
+        lblCompany->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        gridLayout->addWidget(lblCompany, 4, 0, 1, 1);
+
+        lblFeatures = new QLabel(centralWidget);
+        lblFeatures->setObjectName(QStringLiteral("lblFeatures"));
+        lblFeatures->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        gridLayout->addWidget(lblFeatures, 8, 0, 1, 1);
+
+        lblDuration = new QLabel(centralWidget);
+        lblDuration->setObjectName(QStringLiteral("lblDuration"));
+        lblDuration->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        gridLayout->addWidget(lblDuration, 11, 0, 1, 1);
 
         LicenseGenerationClass->setCentralWidget(centralWidget);
         QWidget::setTabOrder(firstNameLine, lastNameLine);
@@ -344,7 +337,6 @@ public:
         QWidget::setTabOrder(featureSpeedBox, featureHistogramBox);
         QWidget::setTabOrder(featureHistogramBox, featureColorBox);
         QWidget::setTabOrder(featureColorBox, durationCombo);
-        QWidget::setTabOrder(durationCombo, generateKeys);
 
         retranslateUi(LicenseGenerationClass);
 
@@ -359,6 +351,12 @@ public:
         lblFirstNameWarning->setText(QApplication::translate("LicenseGenerationClass", "Bitte geben Sie einen Vornamen an!", Q_NULLPTR));
         lblExpirationDate->setText(QApplication::translate("LicenseGenerationClass", "Resultierendes Ablaufdatum: ", Q_NULLPTR));
         lblMacWarning->setText(QApplication::translate("LicenseGenerationClass", "Bitte geben Sie eine vollst\303\244ndige MAC-Adresse an!", Q_NULLPTR));
+        lblCompanyWarning->setText(QApplication::translate("LicenseGenerationClass", "Bitte geben Sie eine Firma an! Wenn Sie die Lizenz privat nutzen wollen, geben Sie 'privat' an!", Q_NULLPTR));
+        featureFullScreenBox->setText(QApplication::translate("LicenseGenerationClass", "Vollbildmodus", Q_NULLPTR));
+        featureSpeedBox->setText(QApplication::translate("LicenseGenerationClass", "Abspielgeschwindigkeit", Q_NULLPTR));
+        featureHistogramBox->setText(QApplication::translate("LicenseGenerationClass", "Videofarben", Q_NULLPTR));
+        featureColorBox->setText(QApplication::translate("LicenseGenerationClass", "Histogramme", Q_NULLPTR));
+        lblFeatureWarning->setText(QApplication::translate("LicenseGenerationClass", "Bitte waehlen Sie minderstens ein Feature aus!", Q_NULLPTR));
         lblLastName->setText(QApplication::translate("LicenseGenerationClass", "Nachname:", Q_NULLPTR));
         lblEnterCustNumb->setText(QApplication::translate("LicenseGenerationClass", "Placeholder", Q_NULLPTR));
         lblCustomerNumber->setText(QApplication::translate("LicenseGenerationClass", "Kundennummer:", Q_NULLPTR));
@@ -368,13 +366,6 @@ public:
         lblCompany->setText(QApplication::translate("LicenseGenerationClass", "Firma:", Q_NULLPTR));
         lblFeatures->setText(QApplication::translate("LicenseGenerationClass", "Features:", Q_NULLPTR));
         lblDuration->setText(QApplication::translate("LicenseGenerationClass", "Lizenzdauer:", Q_NULLPTR));
-        lblCompanyWarning->setText(QApplication::translate("LicenseGenerationClass", "Bitte geben Sie eine Firma an! Wenn Sie die Lizenz privat nutzen wollen, geben Sie 'privat' an!", Q_NULLPTR));
-        featureFullScreenBox->setText(QApplication::translate("LicenseGenerationClass", "Vollbildmodus", Q_NULLPTR));
-        featureSpeedBox->setText(QApplication::translate("LicenseGenerationClass", "Abspielgeschwindigkeit", Q_NULLPTR));
-        featureHistogramBox->setText(QApplication::translate("LicenseGenerationClass", "Videofarben", Q_NULLPTR));
-        featureColorBox->setText(QApplication::translate("LicenseGenerationClass", "Histogramme", Q_NULLPTR));
-        lblFeatureWarning->setText(QApplication::translate("LicenseGenerationClass", "Bitte waehlen Sie minderstens ein Feature aus!", Q_NULLPTR));
-        generateKeys->setText(QApplication::translate("LicenseGenerationClass", "Keys generieren", Q_NULLPTR));
     } // retranslateUi
 
 };

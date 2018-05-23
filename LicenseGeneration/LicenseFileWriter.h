@@ -42,7 +42,7 @@ public:
 	*/
 	void createEntry(QString header, QString keyword, QString value);
 	/**
-	* Overloaded method for int values.
+	*Overloaded method for int values.
 	* @see createEntry()
 	*/
 	void createEntry(QString header, QString keyword, int value);

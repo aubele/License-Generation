@@ -50,7 +50,6 @@ void LicenseGeneration::setUpGui()
 
 	setUpWarnings();
 	setUpButtonBox();
-	setUpKeyButton();
 	setUpMacAddress();
 	setUpFeatures();
 	setUpDurations();
@@ -86,14 +85,7 @@ void LicenseGeneration::setUpButtonBox()
 	buttonBox->addButton(cancel, QDialogButtonBox::RejectRole);
 	// Add to layout
 	QGridLayout* gridLayout = static_cast<QGridLayout*>(ui.centralWidget->layout());
-	gridLayout->addWidget(buttonBox, gridLayout->rowCount()-1, gridLayout->columnCount()-1);
-}
-
-
-void LicenseGeneration::setUpKeyButton()
-{
-	// Add slot
-	connect(ui.generateKeys, SIGNAL(clicked()), this, SLOT(onGenerateKeys()));
+	gridLayout->addWidget(buttonBox, gridLayout->rowCount(), gridLayout->columnCount()-1);
 }
 
 
@@ -255,32 +247,13 @@ bool LicenseGeneration::showKeyQuestion()
 		"Zum Erstellen der Signatur benoetigt es ein gueltiges Keypaar.\n"
 		"\n"
 		"Bitte stellen Sie sicher, dass sich in dem Ordern dieser Anwendung zwei Dateien "
-		"mit dem Namen 'privKey.txt' und 'pubKey.txt' befinden. Falls dies nicht der Fall ist, "
-		"generieren Sie mit dem 'Keys generieren'-Button ein neues Keypaar.",
+		"mit dem Namen 'privKey.txt' und 'pubKey.txt' befinden.",
 		QMessageBox::Ok | QMessageBox::Cancel);
 	if (reply == QMessageBox::Ok)
 	{
 		return true;
 	}
 	return false;
-}
-
-void LicenseGeneration::onGenerateKeys()
-{
-	// Warning message for the user
-	QMessageBox::StandardButton reply;
-	reply = QMessageBox::question(ui.centralWidget, 
-		"Neue Keys generieren", 
-		"Wollen Sie wirklich ein neues Keypaar generieren?\n"
-		"\n"
-		"Die Keys werden in dem Ordner der Lizenzgenerierung abgelegt und "
-		"ueberschreiben eventuell die alten Keys.",
-		QMessageBox::Yes | QMessageBox::No);
-	if (reply == QMessageBox::Yes) 
-	{
-		// Generate private public key pair
-		controller->generateKeyPair();
-	}
 }
 
 
