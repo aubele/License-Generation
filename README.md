@@ -1,16 +1,11 @@
-PROJECT IS WORK IN PROGRESS
+Dieses Repository hält einer meiner Ergebnisse für meine Bachelorarbeit zum Thema:
+Absicherung von Lizenzverifikation in Anwendungssoftware.
 
-Diese Bachelorarbeit beinhaltet das Entwerfen eines Lizenzgenerators und eine 
-Verifikationsmöglichkeit für diese Lizenzen. Dabei sollen verschiedene Absicherungen
-für das Verifikationsverfahren implementiert werden. Hier soll mit Angriffen
-auf die Verifikation gezeigt werden wie unsicher diese ist und mit welchen Maßnahmen
-man die Angriffe erschweren kann.
+Dieser Teil stellt dabei die Implementierung eines Lizenzgenerators dar.
 
-Oben beschriebenes soll dabei für eine Anwendungssoftware entworfen werden.
-Dafür wird ein OpenSource-Projekt der Qt-Company verwendet, welches eine 
-beispielhafte Implementation eines Videoplayers ist. 
-Copyright (C) 2017 The Qt Company Ltd.
+Die erstellten Lizenzen sind dabei für einen Videospieler, welcher im zweiten Teil durch eine
+Lizenzverifikation ergänzt wurde.
 
 Kontakt:
 	Fabio Aubele
-	fabiopaul.aubele@hs-augsburg.de
+	fabioaubele95@hotmail.de
