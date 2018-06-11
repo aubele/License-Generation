@@ -105,5 +105,8 @@
     <Image Include="Resources\key.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="bitmap1.bmp" />
+    <Image Include="LicenseGeneration.ico" />
+    <Image Include="bitmap2.bmp" />
   </ItemGroup>
 </Project>
