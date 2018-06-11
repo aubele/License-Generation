@@ -307,14 +307,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="featureHistogramBox">
+        <widget class="QCheckBox" name="featureColorBox">
          <property name="text">
           <string>Videofarben</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="featureColorBox">
+        <widget class="QCheckBox" name="featureHistogramBox">
          <property name="text">
           <string>Histogramme</string>
          </property>
@@ -435,8 +435,8 @@
   <tabstop>macLine</tabstop>
   <tabstop>featureFullScreenBox</tabstop>
   <tabstop>featureSpeedBox</tabstop>
-  <tabstop>featureHistogramBox</tabstop>
   <tabstop>featureColorBox</tabstop>
+  <tabstop>featureHistogramBox</tabstop>
   <tabstop>durationCombo</tabstop>
  </tabstops>
  <resources>

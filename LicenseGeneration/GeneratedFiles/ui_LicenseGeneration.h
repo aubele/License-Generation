@@ -58,8 +58,8 @@ public:
     QVBoxLayout *verticalLayout_7;
     QCheckBox *featureFullScreenBox;
     QCheckBox *featureSpeedBox;
-    QCheckBox *featureHistogramBox;
     QCheckBox *featureColorBox;
+    QCheckBox *featureHistogramBox;
     QLabel *lblFeatureWarning;
     QLabel *lblLastName;
     QLabel *lblEnterCustNumb;
@@ -254,15 +254,15 @@ public:
 
         verticalLayout_7->addWidget(featureSpeedBox);
 
-        featureHistogramBox = new QCheckBox(features);
-        featureHistogramBox->setObjectName(QStringLiteral("featureHistogramBox"));
-
-        verticalLayout_7->addWidget(featureHistogramBox);
-
         featureColorBox = new QCheckBox(features);
         featureColorBox->setObjectName(QStringLiteral("featureColorBox"));
 
         verticalLayout_7->addWidget(featureColorBox);
+
+        featureHistogramBox = new QCheckBox(features);
+        featureHistogramBox->setObjectName(QStringLiteral("featureHistogramBox"));
+
+        verticalLayout_7->addWidget(featureHistogramBox);
 
         lblFeatureWarning = new QLabel(features);
         lblFeatureWarning->setObjectName(QStringLiteral("lblFeatureWarning"));
@@ -334,9 +334,9 @@ public:
         QWidget::setTabOrder(companyLine, macLine);
         QWidget::setTabOrder(macLine, featureFullScreenBox);
         QWidget::setTabOrder(featureFullScreenBox, featureSpeedBox);
-        QWidget::setTabOrder(featureSpeedBox, featureHistogramBox);
-        QWidget::setTabOrder(featureHistogramBox, featureColorBox);
-        QWidget::setTabOrder(featureColorBox, durationCombo);
+        QWidget::setTabOrder(featureSpeedBox, featureColorBox);
+        QWidget::setTabOrder(featureColorBox, featureHistogramBox);
+        QWidget::setTabOrder(featureHistogramBox, durationCombo);
 
         retranslateUi(LicenseGenerationClass);
 
@@ -354,8 +354,8 @@ public:
         lblCompanyWarning->setText(QApplication::translate("LicenseGenerationClass", "Bitte geben Sie eine Firma an! Wenn Sie die Lizenz privat nutzen wollen, geben Sie 'privat' an!", Q_NULLPTR));
         featureFullScreenBox->setText(QApplication::translate("LicenseGenerationClass", "Vollbildmodus", Q_NULLPTR));
         featureSpeedBox->setText(QApplication::translate("LicenseGenerationClass", "Abspielgeschwindigkeit", Q_NULLPTR));
-        featureHistogramBox->setText(QApplication::translate("LicenseGenerationClass", "Videofarben", Q_NULLPTR));
-        featureColorBox->setText(QApplication::translate("LicenseGenerationClass", "Histogramme", Q_NULLPTR));
+        featureColorBox->setText(QApplication::translate("LicenseGenerationClass", "Videofarben", Q_NULLPTR));
+        featureHistogramBox->setText(QApplication::translate("LicenseGenerationClass", "Histogramme", Q_NULLPTR));
         lblFeatureWarning->setText(QApplication::translate("LicenseGenerationClass", "Bitte waehlen Sie minderstens ein Feature aus!", Q_NULLPTR));
         lblLastName->setText(QApplication::translate("LicenseGenerationClass", "Nachname:", Q_NULLPTR));
         lblEnterCustNumb->setText(QApplication::translate("LicenseGenerationClass", "Placeholder", Q_NULLPTR));

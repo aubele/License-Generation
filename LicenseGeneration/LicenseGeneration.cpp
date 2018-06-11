@@ -80,7 +80,7 @@ void LicenseGeneration::setUpButtonBox()
 	connect(shortcut, SIGNAL(activated()), this, SLOT(onGenerateLicenseFile()));
 	connect(generate, SIGNAL(clicked()), this, SLOT(onGenerateLicenseFile()));
 	buttonBox->addButton(generate, QDialogButtonBox::AcceptRole);
-	QPushButton* cancel = new QPushButton("Abbrechen", buttonBox);
+	QPushButton* cancel = new QPushButton("Cancel", buttonBox);
 	connect(cancel, SIGNAL(clicked()), qApp, SLOT(quit()));
 	buttonBox->addButton(cancel, QDialogButtonBox::RejectRole);
 	// Add to layout
@@ -282,7 +282,7 @@ void LicenseGeneration::setAllValues()
 
 bool LicenseGeneration::validateInput()
 {
-	// Check the input from all fields
+	// Check the input from all necessary fields
 	bool firstName = isFirstNameInputValid();
 	bool lastName = isLastNameInputValid();
 	bool email = isEmailInputValid();
@@ -290,7 +290,7 @@ bool LicenseGeneration::validateInput()
 	bool mac = isMacInputValid();
 	bool feature = isFeatureInputValid();
 
-	// Is everything ok?
+	// All fine?
 	if (firstName && lastName && email && company && mac && feature)
 	{
 		return true;

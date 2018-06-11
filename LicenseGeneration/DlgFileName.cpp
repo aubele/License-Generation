@@ -46,7 +46,7 @@ QString DlgFileName::getFileName()
 
 void DlgFileName::onSetFileName()
 {
-	// Check if the filename is legit according to the windowos guidelines and if something got entered
+	// Check if the filename is legit according to the windowos guidelines
 	if (ui.fileNameLine->text().contains("\\") || ui.fileNameLine->text().contains("/") ||
 		ui.fileNameLine->text().contains(":") || ui.fileNameLine->text().contains("*") ||
 		ui.fileNameLine->text().contains("?") || ui.fileNameLine->text().contains("\"") ||

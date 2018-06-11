@@ -21,7 +21,7 @@
 * the entry again and the specified value for this keyword.
 *
 * To use this class correctly, you first need to set the data through the specified methods. When 
-* finished you can call the write method, to write all the data in the licensefile.
+* finished you can call the write method, to write all the data in the speicified path.
 */
 class LicenseFileWriter
 {

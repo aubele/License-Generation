@@ -5,6 +5,10 @@
 #include "QFile"
 
 
+/**
+* This class is responsible to create a valid license file, therefore it uses cryptographic
+* operations to gurantee a correct signature. Also sets the data in the model.
+*/
 class LicenseController
 {
 public:
